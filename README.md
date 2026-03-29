@@ -4,23 +4,34 @@ Team Information
 
 Team name: InternLink 
 
-Team Leader: Izabela Lako (Git user: izaa2005) 
+Team Leader: Izabela Lako (Git user: izaa2005) Email: ilako23@epoka.edu.al
 Team Members: 
-Inva Hasani (Git user: ihasani-git), 
-Megi Shehi (Git user: megi2203), 
-Deshira-Mariana Lusha (Git user: deshira972),
-Anxhela Valisi (Git user: avalisi23-cmyk) 
+Inva Hasani (Git user: ihasani-git), Email: ihasani23@epoka.edu.a , 
+Megi Shehi (Git user: megi2203), Email: meshehi23@epoka.edu.al , 
+Deshira-Mariana Lusha (Git user: deshira972), Email: dlusha23@epoka.edu.al ,
+Anxhela Valisi (Git user: avalisi23-cmyk) Email: avalisi23@epoka.edu.al
 
 
 Project Details 
 
-Problem: 
+Problem Statement: 
 University students often struggle to find internships, competitions, and professional opportunities in one centralized place, making it difficult for them to stay informed and apply on time 
 
-Our Solution: 
+Proposed Solution: 
 A web-based platform where students can find internships, workshops, and events in one place, while companies can post opportunities, and the university manages and verifies them. 
 
-Project Scope: 
+Project Scope:  
+
+Aim:
+Develop a web-based platform that centralizes internships, workshops, and professional opportunities for students while enabling companies, the university, and administrators to manage and verify postings.
+
+Objectives:
+Provide students with a user-friendly interface to browse, filter, and apply for opportunities.
+Enable companies to create, edit, and manage internship and event listings.
+Allow the university to monitor, verify, and support the quality of posted opportunities.
+Implement an admin system for approving listings, managing users, and ensuring platform integrity.
+Build a secure backend with role-based access and a well-structured database.
+Ensure smooth integration between frontend dashboards and backend APIs.
 
 Within Scope: 
 Web platform development ,
