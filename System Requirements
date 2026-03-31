@@ -110,10 +110,10 @@ Admin shall access an analytics dashboard displaying key stats (number of users,
 - FR23 – Assign Roles
 Admin shall be able to update or change user roles.
 
-3.6 System Feature
+3.6 System Requirements
 
 - FR24 – Dashboard Display
-The system shall provide personalized dashboards for each role (Student, Company, University Staff, Admin) (Simple?)
+The system shall provide personalized dashboards for admin.
 - FR25 – Pagination for Listings
 The system shall paginate long lists (opportunities, users, applications).
 - FR26 – Database Storage
