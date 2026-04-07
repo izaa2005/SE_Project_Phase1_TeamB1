@@ -12,17 +12,15 @@ Agile allows:
 - Flexibility for new requirements
 - Clear task division among team members
 
-This model fits perfectly with the team structure (frontend, backend, full-stack, admin workflows).
-
 2. User Requirements
 
 a. Stakeholders (WHO is involved)
 Stakeholder	Role in InternLink	Interest
-- Students (End-Users)	Browse, filter, and apply for opportunities	Want a simple portal to find verified internships & events
-- Companies	Post, edit, delete their opportunities	Want easy advertisement and student access
-- Epoka University Staff	Verify, monitor, and support posted opportunities	Ensure quality, legitimacy, and relevance
-- Administrators	Manage system, users, and approvals	Maintain data accuracy and platform integrity
-- Development Team (InternLink Team)	Build the platform	Need clear requirements, structured workflow
+- Students (End-Users):	Browse, filter, and apply for opportunities. Want a simple portal to find verified internships & events
+- Companies:	Post, edit, delete their opportunities. Want easy advertisement and student access
+- Epoka University Staff:	Verify, monitor, and support posted opportunities. Ensure quality, legitimacy, and relevance
+- Administrators:	Manage system, users, and approvals. Maintain data accuracy and platform integrity
+- Development Team (InternLink Team):	Build the platform. Need clear requirements, structured workflow
 
 b. User Stories
 Students
@@ -113,6 +111,7 @@ FR18 – Approve/Reject Opportunities
 Staff shall assign approval status to listings.
 
 3.5 Admin Features
+
 FR19 – Manage Users
 Admin shall view and filter all users.
 
@@ -147,51 +146,60 @@ The system shall enforce authentication and validation on all actions.
 
 b. Acceptance Criteria (4-5 REQUIREMENTS TO DO THE ACCEPTANCE CRITERIA)
 
--Login & Registration
+- Login & Registration (All users)
 
-User inputs valid credentials → system authenticates via database
-Incorrect credentials → error message shown
-User is redirected to their role-specific dashboard
-Student Features
+User enters valid credentials → system authenticates against the database and grants access
+User enters invalid credentials → error message is displayed
+After login, user is redirected to their role-specific dashboard
 
--Browse Opportunities
+Student Features:
 
-Student sees paginated opportunity cards
-Filters work (location, type, deadline)
-Results update instantly
+- Browse Opportunities
 
--Apply to Opportunity
+Student views a list of internship opportunities in paginated format
+Filters (location, type, deadline) return relevant results
+Filtered results update without page reload
 
-Student clicks “Apply”
-Required fields validated
-Application stored in database
-Confirmation message shown
-Company Features
+- Apply to Opportunity (External Link)
 
--Post Opportunity
+Student clicks “Apply” → system redirects to the company’s external application link
+External link opens correctly in a new tab
+System does not store application data
 
-Company fills required fields
-Listing saved in database
-Marked as “Pending Verification”
+- Save Opportunity
 
--Edit/Delete Opportunity
+Student can save/bookmark an opportunity
+Saved opportunities appear in the student’s dashboard
+Student can remove saved opportunities at any time
 
-Changes update successfully
-Other dashboards reflect updates
-University Staff Features
+Company Features:
 
--Verify Opportunities
+- Post Opportunity
 
-Staff sees list of pending posts
-Can approve or reject
-Status updates visible to company & admin
-Admin Features
+Company submits a new opportunity including an external application link
+Opportunity is saved in the database
+Status is set to “Pending Verification”
 
--Manage System
+- Edit/Delete Opportunity
 
-Admin views all users
-Can enable/disable accounts
-Can approve, reject, or edit any listing
+Company updates or deletes a listing → changes are saved successfully
+Updates are reflected across all dashboards
+
+University Staff Features:
+
+- Verify Opportunities
+
+Staff can view all pending opportunity submissions
+Staff can approve or reject a listing
+Status changes are visible to company and admin users
+
+Admin Features:
+
+- Manage System
+
+Admin can view all registered users
+Admin can enable or disable user accounts
+Admin can approve, reject, or edit any opportunity
 
 4. Non-Functional Requirements
 
@@ -206,18 +214,30 @@ Scalability: System must support increasing users as Epoka expands opportunities
 b. Acceptance Criteria
 
 Speed
-Main dashboard loads in under 2 seconds
-Filtering results update in under 1 second
+
+Student dashboard (opportunity listings) loads in under 2 seconds
+Filtering internships by field, location, or company updates in under 1 second
+Application submissions are processed instantly without noticeable delay
+
 Security
-Passwords hashed using bcrypt
-JWT authentication for sessions
-Unauthorized access blocked
+
+User passwords are securely hashed using bcrypt
+JWT authentication is used to manage user sessions
+Users can only access features based on their role (student, company, university staff, admin)
+Unauthorized users cannot view or modify applications or postings
+
 Usability
-Users complete key tasks without tutorials
-UI consistent across student/company/university/admin dashboards
+
+Students can easily browse and apply for internships without guidance
+Companies can create and manage opportunities in a few simple steps
+University staff can quickly approve or reject postings
+Interface remains consistent across all dashboards
+
 Reliability
-System uptime > 99%
-No data loss during normal operations
+
+Platform maintains over 99% uptime
+Applications and opportunity data are saved reliably without loss
+System handles multiple users applying and posting simultaneously without errors
 
 5. Application Specifications
 
