@@ -144,7 +144,7 @@ The system shall use REST APIs for all operations.
 FR28 – Security Enforcement
 The system shall enforce authentication and validation on all actions.
 
-b. Acceptance Criteria (4-5 REQUIREMENTS TO DO THE ACCEPTANCE CRITERIA)
+b. Acceptance Criteria
 
 - Login & Registration (All users)
 
