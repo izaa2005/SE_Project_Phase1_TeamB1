@@ -244,9 +244,9 @@ System handles multiple users applying and posting simultaneously without errors
 a. Architecture
 
 InternLink uses a three-tier architecture: frontend, backend, and database.
-The frontend (React) provides dashboards for different users and communicates with the backend via APIs.
-The backend (Node.js/Express or Flask) handles logic and data processing.
-The database (MySQL/PostgreSQL) stores all system data.
+The frontend provides dashboards for different users and communicates with the backend via APIs.
+The backend handles logic and data processing.
+The database stores all system data.
 
 b. Database Model
 
@@ -255,9 +255,9 @@ Main tables include Users, Opportunities, Applications, and Verification, which 
 
 c. Technologies Used
 
-Frontend: React, HTML, CSS, JavaScript
-Backend: Node.js/Express
-Database: MySQL or PostgreSQL
+Frontend: React or HTML, CSS, JavaScript
+Backend: Python
+Database: SQLite or MySQL
 Authentication: JWT and bcrypt
 Version control: GitHub
 
