@@ -1,6 +1,6 @@
 InternLink Platform
 1. Chosen Development Model
-Development Model: Agile (Scrum)
+Development Model: Agile
 
 Justification:
 
@@ -219,46 +219,34 @@ Reliability
 System uptime > 99%
 No data loss during normal operations
 
-5. Application Specifications (jo me detaje)
+5. Application Specifications
 
 a. Architecture
 
-InternLink follows a three-tier architecture consisting of the frontend, backend, and database layers. 
-The frontend is built using React, HTML, CSS, and JavaScript, providing separate dashboards for students, companies, university staff, and administrators,
-all communicating with the backend through REST APIs. The backend, developed using Node.js/Express or Python Flask (depending on final team choice),
-handles authentication, authorization, business logic, and data validation. 
-The database layer uses MySQL or PostgreSQL to store users, opportunities, applications, and verification statuses, ensuring structured and reliable data management.
+InternLink uses a three-tier architecture: frontend, backend, and database.
+The frontend (React) provides dashboards for different users and communicates with the backend via APIs.
+The backend (Node.js/Express or Flask) handles logic and data processing.
+The database (MySQL/PostgreSQL) stores all system data.
 
 b. Database Model
 
-The database is relational, with clearly defined relationships between tables.
-The Users table stores all user accounts and roles, while the Opportunities table links each internship post to the company that created it.
-The Applications table connects students with the opportunities they apply for, using foreign keys referencing Users and Opportunities. 
-The Verification table links university staff decisions to specific opportunities, enabling a verified posting workflow. 
-The structure ensures referential integrity and smooth interaction across all system modules.
+The system uses a relational database.
+Main tables include Users, Opportunities, Applications, and Verification, which are connected through relationships to keep data organized and consistent.
 
 c. Technologies Used
 
-The frontend uses React, HTML, CSS, and JavaScript to create dynamic and reusable UI components. 
-The backend is built with Node.js and Express, chosen for its speed, scalability, and efficient REST API handling.
-A MySQL or PostgreSQL database is used for secure, structured relational data storage.
-Authentication is implemented with JWT for token-based sessions and bcrypt for password hashing.
-Git and GitHub support version control, teamwork, and repository management.
+Frontend: React, HTML, CSS, JavaScript
+Backend: Node.js/Express
+Database: MySQL or PostgreSQL
+Authentication: JWT and bcrypt
+Version control: GitHub
 
 d. User Interface Design
 
-The UI provides clean, role-specific dashboards to ensure simplicity and usability.
-Students view opportunity cards with filters and an apply option.
-Companies have tools to create, edit, and track their listings.
-University staff access a list of pending opportunities with direct approve/reject controls.
-Administrators see a system-wide dashboard for managing users, verifying listings, and monitoring platform activity.
-The design emphasizes clarity, accessibility, and efficiency for all user roles.
+The platform provides simple dashboards for each user role.
+Students can browse and apply for opportunities, companies manage listings, staff verify posts, and admins oversee the system.
 
 e. Security Measures
 
-During registration and throughout system usage, InternLink implements strong security mechanisms.
-Passwords are encrypted using bcrypt, and JWT tokens secure user sessions.
-Role-Based Access Control (RBAC) ensures users only access authorized features.
-All inputs are validated server-side to prevent malicious data.
-The system is protected against common attacks such as SQL injection, XSS, and CSRF, and any file uploads undergo safety checks.
-On deployment, all communication is secured using HTTPS.
+Passwords are encrypted, and user sessions are secured with tokens.
+Access is controlled by user roles, inputs are validated, and the system is protected against common security threats.
