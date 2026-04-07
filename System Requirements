@@ -25,103 +25,125 @@ Stakeholder	Role in InternLink	Interest
 - Development Team (InternLink Team)	Build the platform	Need clear requirements, structured workflow
 
 b. User Stories
-
 Students
 As a student, I want to browse and filter opportunities so that I can quickly find relevant internships.
-As a student, I want to view detailed opportunity information so that I can understand requirements before applying.
-As a student, I want to apply through the platform  so that I can submit applications easily and on time, link needed. (!)
-(+2)
+As a student, I want to view detailed opportunity information so that I understand requirements before applying.
+As a student, I want to apply through the platform so that I can submit applications easily and on time.
+As a student, I want to save/bookmark opportunities so that I can review them later.
+As a student, I want to receive notifications about new opportunities so that I do not miss deadlines.
 
 Companies
+
 As a company, I want to post new opportunities so that students can discover them.
 As a company, I want to edit or delete my listings so that information remains accurate.
-(+3)
-University
-As the university staff, I want to verify posted opportunities so that only legitimate ones appear on the platform.
+As a company, I want to view student applications so that I can evaluate candidates.
+As a company, I want to download applicant documents so that I can review them offline.
+As a company, I want to close opportunities after the deadline so that no further applications are accepted.
+
+University Staff
+
+As university staff, I want to verify opportunities so that only legitimate ones are published.
 
 Administrator
 As an admin, I want to manage users so that the system remains organized and secure.
-As an admin, I want to approve or reject all listings so that platform integrity is maintained.
+As an admin, I want to approve or reject listings so that platform integrity is maintained.
 
-3. Functional Requirements  
-
-a. Description (What the InternLink system must do)
-
+3. Functional Requirements
 
 3.1 User Management
 
-- FR1 – User Registration
-The system shall allow students, companies, university staff, and admins to register using required personal or organizational details.
-- FR2 – User Login
-The system shall authenticate users using email and password.
-- FR3 – Role-Based Access Control
-The system shall restrict features based on user type (Student, Company, University Staff, Admin).
-- FR4 – Profile Management
-Users shall be able to view and update their personal profiles.
-- FR5 – Password Recovery
-The system shall allow users to recover/reset forgotten passwords via email verification.
+FR1 – User Registration
+The system shall allow users to register by providing required fields (name, email, password, role) and ensure the email is unique.
+
+FR2 – User Login
+The system shall authenticate users using email and password and allow access only if credentials are valid.
+
+FR3 – Role-Based Access Control
+The system shall restrict system features based on user roles.
+
+FR4 – Profile Management
+Users shall be able to view and update their profile information.
+
+FR5 – Password Recovery
+The system shall allow users to reset their password via email verification.
 
 3.2 Student Features
 
-- FR6 – View Opportunities
-The system shall allow students to browse a list of available internship opportunities.
-- FR7 – Search Opportunities
-The system shall allow students to search for opportunities based on keywords.
-- FR8 – Filter Opportunities
-The system shall allow filtering by category, location, company, deadline, and internship type.
-- FR9 – View Opportunity Details
-The system shall display full information about each opportunity.
-- FR10 – Apply to Opportunities
-The system shall allow students to apply to an opportunity by submitting required information/documents. (!)
-- FR11 – Application Tracking
-The system shall allow students to view the status of their submitted applications (Pending, Reviewed, Accepted, Rejected).
+FR6 – View Opportunities
+The system shall display approved opportunities sorted by relevance or deadline.
+
+FR7 – Search Opportunities
+The system shall return opportunities based on keyword matches.
+
+FR8 – Filter Opportunities
+The system shall allow filtering by category, location, type, and deadline.
+
+FR9 – View Opportunity Details
+The system shall display full details including requirements and company information.
+
+FR10 – Apply to Opportunities
+The system shall allow students to submit applications linked to an opportunity.
+
+FR11 – Application Tracking
+The system shall display application status updates.
 
 3.3 Company Features
 
-- FR12 – Post Opportunity
-Companies shall be able to create and submit internship listings.
-- FR13 – Edit Opportunity
-Companies shall be able to update details of their posted opportunities.
-- FR14 – Delete Opportunity
-Companies shall be able to delete their posted opportunities.
-- FR15 – View Verification Status
-Companies shall be able to see whether their posted opportunities are Approved, Rejected, or Pending.
-- FR16 – Manage Company Profile
-Companies shall be able to update company details.
+FR12 – Post Opportunity
+Companies shall submit opportunities with required details.
+
+FR13 – Edit Opportunity
+Companies shall update their own listings.
+
+FR14 – Delete Opportunity
+Companies shall remove their listings from the system.
+
+FR15 – View Verification Status
+Companies shall see the approval status of their listings.
+
+FR16 – Manage Company Profile
+Companies shall update their profile details.
 
 3.4 University Staff Features
 
-- FR17 – Review Submitted Opportunities
-University staff shall access a list of opportunities marked as “Pending”.
-- FR18 – Approve or Reject Opportunities
-Staff shall be able to Approve or Reject opportunities posted by companies.
+FR17 – Review Opportunities
+Staff shall view all pending opportunities.
 
+FR18 – Approve/Reject Opportunities
+Staff shall assign approval status to listings.
 
 3.5 Admin Features
+FR19 – Manage Users
+Admin shall view and filter all users.
 
-- FR19 – Manage Users
-Admin shall be able to view all users and filter by role.
-- FR20 – Enable/Disable Accounts
-Admin shall be able to activate or deactivate any user account. (?)
-- FR21 – Moderate Opportunities
-Admin shall be able to approve, reject, edit, or delete any posted opportunity. (?)
-- FR22 – Monitor System Activity
-Admin shall access an analytics dashboard displaying key stats (number of users, opportunities, applications).
-- FR23 – Assign Roles
-Admin shall be able to update or change user roles.
+FR20 – Enable/Disable Accounts
+Admin shall control user account access.
+
+FR21 – Moderate Opportunities
+Admin shall edit, approve, reject, or delete any listing.
+
+FR22 – Monitor System Activity
+Admin shall view system statistics via dashboard.
+
+FR23 – Assign Roles
+Admin shall update user roles.
 
 3.6 System Requirements
 
-- FR24 – Dashboard Display
-The system shall provide personalized dashboards for admin.
-- FR25 – Pagination for Listings
-The system shall paginate long lists (opportunities, users, applications).
-- FR26 – Database Storage
-The system shall store all users, opportunities, and applications in a secure database.
-- FR27 – API Integration
-The system shall use backend APIs for all data communication between frontend and backend.
-- FR28 – Security Requirements
-The system shall protect user data with authentication tokens, validation, and secure endpoints. 
+FR24 – Dashboard Display
+The system shall provide role-specific dashboards.
+
+FR25 – Pagination
+The system shall limit results per page.
+
+FR26 – Data Storage
+The system shall securely store all platform data.
+
+FR27 – API Communication
+The system shall use REST APIs for all operations.
+
+FR28 – Security Enforcement
+The system shall enforce authentication and validation on all actions.
 
 b. Acceptance Criteria (4-5 REQUIREMENTS TO DO THE ACCEPTANCE CRITERIA)
 
